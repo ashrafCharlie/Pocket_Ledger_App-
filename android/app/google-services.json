@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "489122959155",
+    "project_id": "pocket-ledger-app-0",
+    "storage_bucket": "pocket-ledger-app-0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489122959155:android:d3d387c1460b09cae33846",
+        "android_client_info": {
+          "package_name": "com.example.pocket_ledger_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489122959155-iui07245m5n0i50t7dt9m6cifl3cnkqa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pocket_ledger_app",
+            "certificate_hash": "b18a4b3cc0021c8712b89fe0adf652e876ae4afd"
+          }
+        },
+        {
+          "client_id": "489122959155-ghsmm3e74n41qr0nu0m5fbkklm0p3ueo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpQBpruYHBt5WsfsZ8DbL54MxnPQT1JEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489122959155-ghsmm3e74n41qr0nu0m5fbkklm0p3ueo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
