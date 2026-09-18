@@ -43,6 +43,7 @@ dependencies:
   isar_community: ^3.3.2
   isar_community_flutter_libs: ^3.3.2
   path_provider: ^2.1.5
+  google_nav_bar: ^5.0.7
 
 
 dev_dependencies:

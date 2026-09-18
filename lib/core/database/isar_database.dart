@@ -4,8 +4,12 @@ import 'package:pocket_ledger_app/features/transaction/data/models/transaction_m
 
 class IsarDatabase {
   IsarDatabase._();
-  static Future<Isar> open() async {
+  static Future<Isar> open(
+  {
+    required List<CollectionSchema> schemas,
+}
+      ) async {
     final dir = await getApplicationDocumentsDirectory();
-    return Isar.open([TransactionModelSchema], directory: dir.path );
+    return Isar.open(schemas, directory: dir.path );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:isar_community/isar.dart';
-import 'package:pocket_ledger_app/features/transaction/data/enums/transaction_type.dart';
+import '../../domain/enums/transaction_type.dart';
 
 part 'transaction_model.g.dart';
 @collection
@@ -13,5 +13,7 @@ class TransactionModel {
   String category = '';
   String? note;
   DateTime date = DateTime.now();
+
+
 
 }

@@ -66,5 +66,19 @@ class AppValidator {
     return null;
  }
 
+ static String? amount(String? value){
+   if (value == null || value.trim().isEmpty) {
+     return 'Please enter amount';
+   }
+
+   final amount = double.tryParse(value.trim());
+
+   if (amount == null || amount <= 0) {
+     return 'Please enter a valid amount';
+   }
+
+   return null;
+ }
+
 
 }
