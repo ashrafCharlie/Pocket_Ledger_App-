@@ -1,17 +1,66 @@
-# pocket_ledger_app
+# Pocket Ledger App
 
-A new Flutter project.
+A modern Flutter personal finance management application built with **Flutter, Firebase, Isar, and BLoC**.
 
-## Getting Started
+This project was built to practice and demonstrate how a real-world Flutter application can be structured using **Clean Architecture, feature-first folder structure, state management, Firebase Authentication, local database management with Isar, transaction filtering, and notification handling**.
 
-This project is a starting point for a Flutter application.
+## 📸 Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+<p align="center">
+  <img src="screenshots/login_screen.png" width="30%">
+  <img src="screenshots/signup_screen.png" width="30%">
+  <img src="screenshots/home_screen.png" width="30%">
+</p>
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+<p align="center">
+  <img src="screenshots/add_transaction.png" width="30%">
+  <img src="screenshots/transaction_screen.png" width="30%">
+  <img src="screenshots/filter_screen.png" width="30%">
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img src="screenshots/profile_screen.png" width="30%">
+  <img src="screenshots/notification.png" width="30%">
+</p>
+
+## Features
+
+- User Authentication (Login & Sign Up)
+- Income & Expense Tracking
+- Add, Edit & Delete Transactions
+- Transaction Categories
+- Transaction Notes
+- Transaction Date Management
+- Transaction Filtering
+- Category Filtering
+- Type Filtering
+- Amount Filtering
+- Date Range Filtering
+- Transaction Sorting
+- Financial Overview
+- Recent Transactions
+- User Profile
+- Logout
+- Local Notifications
+- Firebase Cloud Messaging (FCM)
+
+## Technologies & Packages
+
+- **Flutter & Dart**
+- **BLoC**
+- **Clean Architecture**
+- **Feature-First Architecture**
+- **Isar Community** — Local database
+- **Firebase Authentication**
+- **Firebase Cloud Messaging (FCM)**
+- **Flutter Local Notifications**
+- **Equatable**
+- **Git & GitHub**
+
+## Database
+
+Transactions are stored locally using the **Isar Community** database.
+
+## Notifications
+
+The application uses **Firebase Cloud Messaging (FCM)** and **Local Notifications** for basic notification functionality.
