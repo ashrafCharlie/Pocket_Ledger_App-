@@ -4,6 +4,7 @@ import 'package:pocket_ledger_app/features/transaction/domain/entities/transacti
 class TransactionMapper {
   static TransactionEntity toEntity(TransactionModel model){
     return TransactionEntity(
+      id: model.id,
         amount: model.amount,
         type: model.type,
         category: model.category,

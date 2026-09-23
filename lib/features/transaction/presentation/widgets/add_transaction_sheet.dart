@@ -7,6 +7,8 @@ import 'package:pocket_ledger_app/features/transaction/presentation/bloc/transac
 import 'package:pocket_ledger_app/features/transaction/presentation/bloc/transaction_event.dart';
 import 'package:pocket_ledger_app/features/transaction/presentation/bloc/transaction_state.dart';
 
+import '../../domain/constants/transaction_categories.dart';
+
 class AddTransactionSheet extends StatefulWidget {
   const AddTransactionSheet({super.key});
 
@@ -27,6 +29,7 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
     amountController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return BlocListener<TransactionBloc,TransactionState>(
@@ -97,40 +100,47 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                        child: Text(type.name.toUpperCase()),
                      );
                    },).toList() ,
-                   onChanged: (value){
-                   if(value == null) return;
+                 onChanged: (value) {
+                   if (value == null) return;
+
                    setState(() {
                      selectedType = value;
+
+                     selectedCategory = value == TransactionType.expense
+                         ? TransactionCategories.expenseCategories.first
+                         : TransactionCategories.incomeCategories.first;
                    });
-                 }),
+                 },
+                 ),
 
                 SizedBox(
                   height: 8.0,
                 ),
 
                 DropdownButtonFormField(
-
                   initialValue: selectedCategory,
-                    decoration: InputDecoration(
-                      labelText: "Category",
-                      border: OutlineInputBorder(),
+                  decoration: const InputDecoration(
+                    labelText: "Category",
+                    border: OutlineInputBorder(),
+                  ),
+                  items: (selectedType == TransactionType.expense
+                      ? TransactionCategories.expenseCategories
+                      : TransactionCategories.incomeCategories)
+                      .map(
+                        (category) => DropdownMenuItem(
+                      value: category,
+                      child: Text(category),
                     ),
-                    items: [
-                      DropdownMenuItem(
-                        value: 'Food',
-                          child: Text("Food")),
+                  )
+                      .toList(),
+                  onChanged: (value) {
+                    if (value == null) return;
 
-                      DropdownMenuItem(
-                        value: "Shopping",
-                          child: Text("Sopping")),
-
-                    ],
-                    onChanged: (value){
-                    if(value == null) return;
                     setState(() {
                       selectedCategory = value;
                     });
-                    }),
+                  },
+                ),
 
                 SizedBox(height: 8.0,),
 
@@ -183,7 +193,6 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                           if(!formKey.currentState!.validate()) return;
 
                           final transaction = TransactionEntity(
-                              id: 0,
                               amount:double.parse( amountController.text.trim()),
                               type: selectedType,
                               category: selectedCategory,
@@ -200,7 +209,6 @@ class _AddTransactionSheetState extends State<AddTransactionSheet> {
                     );
                   },
                 ),
-
               ],
             ),
           ),

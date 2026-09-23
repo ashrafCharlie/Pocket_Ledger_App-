@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:pocket_ledger_app/features/authentication/domain/entities/app_user_entity.dart';
 import 'package:pocket_ledger_app/features/home/presentation/screens/home_screen.dart';
 import 'package:pocket_ledger_app/features/profile/presentation/screens/profile_screen.dart';
+import 'package:pocket_ledger_app/features/transaction/presentation/screens/transaction_screen.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+  final AppUser currentUser;
+  const MainScreen({super.key, required this.currentUser});
+
 
   @override
   State<MainScreen> createState() => _MainScreenState();
@@ -12,10 +16,11 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
-  final List<Widget> screens = [HomeScreen(),TransactionScreen(),StaticScreen(), ProfileScreen()];
+
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> screens = [HomeScreen(),TransactionScreen(), ProfileScreen(currentUser: widget.currentUser ,)];
 
     return Scaffold(
       body: screens[currentIndex],
@@ -57,10 +62,7 @@ class _MainScreenState extends State<MainScreen> {
                   icon: Icons.receipt_long_outlined,
                   text: 'Transactions',
                 ),
-                GButton(
-                  icon: Icons.bar_chart_outlined,
-                  text: 'Statistics',
-                ),
+
                 GButton(
                   icon: Icons.person_outline,
                   text: 'Profile',
@@ -72,24 +74,6 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
-
-
-
-
-
-
-class TransactionScreen extends StatelessWidget {
-  const TransactionScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Transaction scrrren"),
-      ),
-    );
-  }
-}
 
 class StaticScreen extends StatelessWidget {
   const StaticScreen({super.key});

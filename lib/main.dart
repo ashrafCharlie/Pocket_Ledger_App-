@@ -64,22 +64,10 @@ class MyApp extends StatelessWidget {
                       child: CircularProgressIndicator(),
                     ),);
                   }
-                  if(state is AuthErrorState){
-                  return  Scaffold(body:Center(
-                      child: Text(state.errorMsg),
-                    ),);
-                  }
                   if(state is AuthenticateState){
-                    return MainScreen();
+                    return MainScreen(currentUser: state.user,);
                   }
-                  if(state is UnAuthenticateState){
-                    return SwitchPage();
-                  }
-                  return Scaffold(
-                    body: Center(
-                      child: Text("Some Error Occurred"),
-                    ),
-                  );
+                  return SwitchPage();
                 },
             ),
           ),
