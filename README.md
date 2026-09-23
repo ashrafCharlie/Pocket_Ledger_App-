@@ -7,20 +7,19 @@ This project was built to practice and demonstrate how a real-world Flutter appl
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/login_screen.png" width="30%">
-  <img src="screenshots/signup_screen.png" width="30%">
-  <img src="screenshots/home_screen.png" width="30%">
+  <img src="screen_shots/login_screen.png" width="30%">
+  <img src="screen_shots/signup_screen.png" width="30%">
+  <img src="screen_shots/home_screen.png" width="30%">
 </p>
 
 <p align="center">
-  <img src="screenshots/add_transaction.png" width="30%">
-  <img src="screenshots/transaction_screen.png" width="30%">
-  <img src="screenshots/filter_screen.png" width="30%">
+  <img src="screen_shots/add_transaction_screen.png" width="30%">
+  <img src="screen_shots/transaction_screen.png" width="30%">
+  <img src="screen_shots/transaction_filter.png" width="30%">
 </p>
 
 <p align="center">
-  <img src="screenshots/profile_screen.png" width="30%">
-  <img src="screenshots/notification.png" width="30%">
+  <img src="screen_shots/profile_screen.png" width="30%">
 </p>
 
 ## Features
